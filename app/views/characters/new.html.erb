@@ -1,0 +1,11 @@
+<h1>Characters#new</h1>
+<p>Find me in app/views/characters/new.html.erb</p>
+
+
+<%= form_with model: @character do |f|  %>
+<%= f.text_field :name, placeholder: 'name'%>
+<%= f.text_field :occupation, placeholder: 'occupation' %>
+<%= f.text_field :level, placeholder: 'level' %>
+<%= f.select :user_id, User.all.map {|user| [user.name, user.id]} %>
+<%= f.submit %>
+<% end %>

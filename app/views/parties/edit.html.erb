@@ -1,0 +1,9 @@
+<h1>Parties#edit</h1>
+<p>Find me in app/views/parties/edit.html.erb</p>
+
+
+<%= form_with model: @party do |f|  %>
+<%= f.text_field :name, placeholder: 'name'%>
+<%= f.text_field :player_count, placeholder: 'player count' %>
+<%= f.submit %>
+<% end %>

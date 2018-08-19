@@ -1,0 +1,10 @@
+<h1>Parties#new</h1>
+<p>Find me in app/views/parties/new.html.erb</p>
+
+
+
+<%= form_with model: @party do |f|  %>
+<%= f.text_field :name, placeholder: 'name'%>
+<%= select_tag 'character_id', options_for_select(Character.all.collect{ |u| [u.name, u.id] }), multiple: true %>
+<%= f.submit %>
+<% end %>
